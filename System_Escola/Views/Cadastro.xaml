@@ -8,7 +8,7 @@
         Title="Cadastro" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="119"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
@@ -55,8 +55,23 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" >
-                <Label Content="Informações de contato" FontSize="18" FontFamily="Times New Roman" Height="44"  Margin="100,0,100,0" Width="250" FontWeight="Bold"/>
-
+                <Label Content="Informações de contato" FontSize="18" FontFamily="Times New Roman" Height="44"  Margin="90,-8,90,0" Width="250" FontWeight="Bold"/>
+                <Label Content="Telefone:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,-10,0,0" Width="70"/>
+                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
+                <Label Content="Rua:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="58"/>
+                <TextBox TextWrapping="Wrap" Width="213" Margin="-160,0,0,0"/>
+                <Label Content="Bairro:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="70"/>
+                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
+                <Label Content="CEP:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="60"/>
+                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,-10,0,0"/>
+                <Label Content="Email:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="0,-330,0,0" Width="60"/>
+                <TextBox TextWrapping="Wrap" Width="184" Margin="100,-289,0,0" Height="19"/>
+                <Label Content="N°:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="190,-240,0,0" Width="60"/>
+                <TextBox TextWrapping="Wrap" Width="88" Margin="200,-190,0,0" Height="19"/>
+                <Label Content="Cidade:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="50,-139,0,0" Width="60"/>
+                <TextBox TextWrapping="Wrap" Width="171" Margin="130,-100,0,0" Height="19"/>
+                <Label Content="Estado:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="50,-55,0,0" Width="60"/>
+                <ComboBox Width="171" Margin="130,-20,0,0" Height="19"/>
             </StackPanel>
         </Grid>
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Escola.Views;
 
 namespace System_Escola
 {
@@ -28,6 +29,12 @@ namespace System_Escola
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Cadastro cha = new Cadastro();
+            cha.ShowDialog();
         }
     }
 }
