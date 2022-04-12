@@ -55,6 +55,7 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" >
+                <Label Content="Informações de contato" FontSize="18" FontFamily="Times New Roman" Height="44"  Margin="100,0,100,0" Width="250" FontWeight="Bold"/>
 
             </StackPanel>
         </Grid>
