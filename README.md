@@ -1,2 +1,2 @@
-# System_Escola confia bro
+# System_Escola
 Atividade de um sistema escolar

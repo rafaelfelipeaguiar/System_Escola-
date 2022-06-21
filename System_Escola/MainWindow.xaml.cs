@@ -33,8 +33,27 @@ namespace System_Escola
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Cadastro cha = new Cadastro();
-            cha.ShowDialog();
+            Cadastro chamar = new Cadastro();
+            chamar.ShowDialog();
+        }
+
+        private void bt_Curso_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroCurso chamar = new CadastroCurso();
+            chamar.ShowDialog();
+        }
+
+        private void bt_List_Click(object sender, RoutedEventArgs e)
+        {
+            CursoList chamar = new CursoList();
+            chamar.ShowDialog();
+
+        }
+
+        private void bt_listEscola_Click(object sender, RoutedEventArgs e)
+        {
+            EscolaList chamar = new EscolaList();
+            chamar.ShowDialog();
         }
     }
 }

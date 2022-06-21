@@ -15,22 +15,36 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="43*"/>
-                <RowDefinition Height="114*"/>
-                <RowDefinition Height="60*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Content="Cadastre-se Aqui!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="558" FontSize="48" FontFamily="Gill Sans Ultra Bold" OpacityMask="#FF5B1212" Height="147" Grid.Row="1" Margin="138,53,0,0" RenderTransformOrigin="0.5,0.5" FontWeight="Normal">
-                <Label.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-0.14"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Label.RenderTransform>
-            </Label>
-            <Button Content="Vamos Lá" HorizontalAlignment="Left" Margin="272,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="72" Width="190" Background="{x:Null}" FontSize="16" FontFamily="Arial Black" Click="Button_Click"/>
+            <Grid Grid.Row="0">
+                <Label Content="Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="182" FontSize="48" FontFamily="Gill Sans Ultra Bold" OpacityMask="#FF5B1212" Height="74" Margin="37,10,0,0" RenderTransformOrigin="0.5,0.5" FontWeight="Normal"></Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Escola" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" FontSize="20" FontFamily="Gill Sans Ultra Bold" OpacityMask="#FF5B1212" Height="38" Margin="0,114,0,0" RenderTransformOrigin="0.5,0.5" FontWeight="Normal"></Label>
+                    <Label Content="Curso" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" FontSize="20" FontFamily="Gill Sans Ultra Bold" OpacityMask="#FF5B1212" Height="38" Margin="0,181,0,0" RenderTransformOrigin="0.487,2.636" FontWeight="Normal"></Label>
 
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label Content="Cadastro" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" FontSize="20" FontFamily="Gill Sans Ultra Bold" OpacityMask="#FF5B1212" Height="38" Margin="0,29,0,0" RenderTransformOrigin="0.5,0.5" FontWeight="Normal"></Label>
+                    <Button Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Height="46" Width="176" Background="#FF265CE6" FontSize="16" FontFamily="Arial Black" Click="Button_Click" Foreground="Black" BorderBrush="{x:Null}" Margin="0,103,0,0"/>
+                    <Button x:Name="bt_Curso" Content="&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,187,0,0" VerticalAlignment="Top" Height="46" Width="176" Background="#FF265CE6" FontFamily="Arial Black" FontSize="16" Click="bt_Curso_Click" BorderBrush="{x:Null}"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Label Content="Listagem" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" FontSize="20" FontFamily="Gill Sans Ultra Bold" OpacityMask="#FF5B1212" Height="38" Margin="0,27,0,0" RenderTransformOrigin="0.5,0.5" FontWeight="Normal"></Label>
+                    <Button x:Name="bt_List" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="176" Click="bt_List_Click" Background="#FF265CE6" FontSize="16" FontFamily="Arial Black" Margin="42,187,0,0" BorderBrush="{x:Null}"/>
+                    <Button x:Name="bt_listEscola" Content="" HorizontalAlignment="Left" Margin="42,103,0,0" Height="46" Width="176" VerticalAlignment="Top" Background="#FF265CE6" BorderBrush="{x:Null}" Foreground="Black" Click="bt_listEscola_Click"/>
+                </Grid>
+            </Grid>
+            <Rectangle HorizontalAlignment="Center" Height="2" Margin="0,85,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+            <Rectangle HorizontalAlignment="Center" Height="2" Margin="0,165,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="800"/>
         </Grid>
     </Grid>
 </Window>

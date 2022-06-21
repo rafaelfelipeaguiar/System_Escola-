@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Escola.Views"
         mc:Ignorable="d"
-        Title="Cadastro" Height="450" Width="800">
+        Title="Cadastro" Height="550" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="119"/>
+            <RowDefinition Height="185"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
@@ -20,15 +20,21 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <Label Content="Informações" FontSize="20" HorizontalAlignment="Left" Margin="20,-5,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Label Content="Nome" FontSize="20" HorizontalAlignment="Left" Margin="179,10,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Margin="64,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22"/>
-            <Label Content="CNPX" FontSize="20" HorizontalAlignment="Left" Margin="176,62,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Margin="64,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22"/>
-            <Label Content="Razão Social" FontSize="20" HorizontalAlignment="Left" Margin="531,13,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Margin="441,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22"/>
-            <Label Content="Incrição Estadual" FontSize="20" HorizontalAlignment="Left" Margin="522,62,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Margin="441,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition Width="781*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Informações" FontSize="20" HorizontalAlignment="Left" Margin="1,-5,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+            <Label Content="Nome" FontSize="20" HorizontalAlignment="Left" Margin="160,10,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+            <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="45,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22" Grid.Column="1"/>
+            <Label Content="CNPJ" FontSize="20" HorizontalAlignment="Left" Margin="157,62,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+            <TextBox x:Name="txtCNPJ" HorizontalAlignment="Left" Margin="45,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22" Grid.Column="1"/>
+            <Label Content="Razão Social" FontSize="20" HorizontalAlignment="Left" Margin="512,13,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+            <TextBox x:Name="txtRazao" HorizontalAlignment="Left" Margin="422,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22" Grid.Column="1"/>
+            <Label Content="Inscrição Estadual" FontSize="20" HorizontalAlignment="Left" Margin="503,62,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+            <TextBox x:Name="txtInscrcao" HorizontalAlignment="Left" Margin="422,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22" Grid.Column="1"/>
+            <Label Content="Complemento" FontSize="20" HorizontalAlignment="Left" Margin="312,113,0,0" FontFamily="Times New Roman" Height="44" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+            <TextBox x:Name="txtComplemento" HorizontalAlignment="Left" Margin="231,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="22" Grid.Column="1"/>
 
 
         </Grid>
@@ -39,72 +45,72 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0">
+            <StackPanel  Grid.Column="0">
                 <Label Content="Informações Publicas" FontSize="20" FontFamily="Times New Roman" Height="44" FontWeight="Bold" Margin="100,0,100,0"/>
                 <Label Content="Tipo:" FontSize="15" FontFamily="Times New Roman" Height="44" FontWeight="Bold" Margin="20,-20,330,0"/>
-                <RadioButton Content="Pública" FontSize="15" Width="100" Margin="-200,-20,0,0"/>
-                <RadioButton Content="Privada" FontSize="15" Width="100" Margin="200,-17,0,0"/>
+                <RadioButton x:Name="rdbPublica" Content="Pública" FontSize="15" Width="100" Margin="-200,-20,0,0"/>
+                <RadioButton x:Name="rdbPrivada" Content="Privada" FontSize="15" Width="100" Margin="200,-17,0,0"/>
                 <Label Content="Data Criação:" FontSize="15" FontFamily="Times New Roman" Height="44" FontWeight="Bold" Margin="20,10,250,0"/>
-                <DatePicker Margin="0,-20,0,0" Width="300"/>
+                <DatePicker x:Name="dtpDataCricao" Margin="0,-20,0,0" Width="300"/>
                 <Label Content="Responsável:" FontSize="15" FontFamily="Times New Roman" Height="25" FontWeight="Bold" Margin="20,10,250,0" FontStyle="Normal"/>
                 <Label Content="Nome" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="20,0,330,0"/>
-                <Label Content="iwnuidcnidc" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="200,-30,30,0"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="-230,0,0,0"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="150,-19,0,0"/>
+                <Label Content="Telefone" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="200,-30,30,0"/>
+                <TextBox x:Name="txtNomeResponsavel" TextWrapping="Wrap" Width="120" Margin="-230,0,0,0"/>
+                <TextBox x:Name="txtTelefoneResponsavel" TextWrapping="Wrap" Width="120" Margin="150,-19,0,0"/>
 
             </StackPanel>
 
             <StackPanel Grid.Column="1" >
-                <Label Content="Informações de contato" FontSize="18" FontFamily="Times New Roman" Height="44"  Margin="90,-8,90,0" Width="250" FontWeight="Bold"/>
+                <Label Content="Informações de endereço e Contato  " FontSize="18" FontFamily="Times New Roman" Height="44" Width="303" FontWeight="Normal" />
                 <Label Content="Telefone:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,-10,0,0" Width="70"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
+                <TextBox x:Name="txttelefone" TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
                 <Label Content="Rua:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="58"/>
-                <TextBox TextWrapping="Wrap" Width="213" Margin="-160,0,0,0"/>
+                <TextBox x:Name="txtRua" TextWrapping="Wrap" Width="213" Margin="-160,0,0,0"/>
                 <Label Content="Bairro:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="70"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
+                <TextBox x:Name="txtBairro" TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
                 <Label Content="CEP:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="-300,0,0,0" Width="60"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,-10,0,0"/>
+                <TextBox x:Name="txtCep" TextWrapping="Wrap" Width="120" Margin="-250,-10,0,0"/>
                 <Label Content="Email:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="0,-330,0,0" Width="60"/>
-                <TextBox TextWrapping="Wrap" Width="184" Margin="100,-289,0,0" Height="19"/>
+                <TextBox x:Name="txtEmail" TextWrapping="Wrap" Width="184" Margin="100,-289,0,0" Height="19"/>
                 <Label Content="N°:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="190,-240,0,0" Width="60"/>
-                <TextBox TextWrapping="Wrap" Width="88" Margin="200,-190,0,0" Height="19"/>
+                <TextBox x:Name="txtNumero" TextWrapping="Wrap" Width="88" Margin="200,-190,0,0" Height="19"/>
                 <Label Content="Cidade:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="50,-139,0,0" Width="60"/>
-                <TextBox TextWrapping="Wrap" Width="171" Margin="130,-100,0,0" Height="19"/>
+                <TextBox x:Name="txtCidade" TextWrapping="Wrap" Width="171" Margin="130,-100,0,0" Height="19"/>
                 <Label Content="Estado:" FontSize="15" FontFamily="Times New Roman" Height="30" FontWeight="Bold" Margin="50,-55,0,0" Width="60"/>
-                <ComboBox Width="171" Margin="130,-20,0,0" Height="19">
-                    <ComboBoxItem>AC</ComboBoxItem>
-                    <ComboBoxItem>AL</ComboBoxItem>
-                    <ComboBoxItem>AP</ComboBoxItem>
-                    <ComboBoxItem>AM</ComboBoxItem>
-                    <ComboBoxItem>BA</ComboBoxItem>
-                    <ComboBoxItem>CE</ComboBoxItem>
-                    <ComboBoxItem>DF</ComboBoxItem>
-                    <ComboBoxItem>ES</ComboBoxItem>
-                    <ComboBoxItem>GO</ComboBoxItem>
-                    <ComboBoxItem>MA</ComboBoxItem>
-                    <ComboBoxItem>MT</ComboBoxItem>
-                    <ComboBoxItem>MS</ComboBoxItem>
-                    <ComboBoxItem>MG</ComboBoxItem>
-                    <ComboBoxItem>PA</ComboBoxItem>
-                    <ComboBoxItem>PB</ComboBoxItem>
-                    <ComboBoxItem>PR</ComboBoxItem>
-                    <ComboBoxItem>PE</ComboBoxItem>
-                    <ComboBoxItem>PI</ComboBoxItem>
-                    <ComboBoxItem>RJ</ComboBoxItem>
-                    <ComboBoxItem>RN</ComboBoxItem>
-                    <ComboBoxItem>RS</ComboBoxItem>
-                    <ComboBoxItem>RO</ComboBoxItem>
-                    <ComboBoxItem>RR</ComboBoxItem>
-                    <ComboBoxItem>SC</ComboBoxItem>
-                    <ComboBoxItem>SP</ComboBoxItem>
-                    <ComboBoxItem>SE</ComboBoxItem>
-                    <ComboBoxItem>TO</ComboBoxItem>
+                <ComboBox x:Name="cbEstado" Width="171" Margin="130,-20,0,0" Height="19">
+                    <ComboBoxItem Content="AC"/>
+                    <ComboBoxItem Content="AL"/>
+                    <ComboBoxItem Content="AP"/>
+                    <ComboBoxItem Content="AM"/>
+                    <ComboBoxItem Content="BA"/>
+                    <ComboBoxItem Content="CE"/>
+                    <ComboBoxItem Content="DF"/>
+                    <ComboBoxItem Content="ES"/>
+                    <ComboBoxItem Content="GO"/>
+                    <ComboBoxItem Content="MA"/>
+                    <ComboBoxItem Content="MT"/>
+                    <ComboBoxItem Content="MS"/>
+                    <ComboBoxItem Content="MG"/>
+                    <ComboBoxItem Content="PA"/>
+                    <ComboBoxItem Content="PB"/>
+                    <ComboBoxItem Content="PR"/>
+                    <ComboBoxItem Content="PE"/>
+                    <ComboBoxItem Content="PI"/>
+                    <ComboBoxItem Content="RJ"/>
+                    <ComboBoxItem Content="RN"/>
+                    <ComboBoxItem Content="RS"/>
+                    <ComboBoxItem Content="RO"/>
+                    <ComboBoxItem Content="RR"/>
+                    <ComboBoxItem Content="SC"/>
+                    <ComboBoxItem Content="SP"/>
+                    <ComboBoxItem Content="SE"/>
+                    <ComboBoxItem Content="TO"/>
                 </ComboBox>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Row="3">
-            <Button Content="Salvar" FontSize="20" HorizontalAlignment="Left" Margin="694,0,0,0" VerticalAlignment="Center" Height="30" Width="69" FontFamily="Modern No. 20" FontWeight="Bold" Background="#FF0A9706" Foreground="Black"/>
+            <Button x:Name="bnt_Salvar" Content="Salvar" FontSize="20" HorizontalAlignment="Left" Margin="694,0,0,0" VerticalAlignment="Center" Height="30" Width="69" FontFamily="Modern No. 20" FontWeight="Bold" Background="#FF0A9706" Foreground="Black" Click="bnt_Salvar_Click"/>
         </Grid>
 
     </Grid>
