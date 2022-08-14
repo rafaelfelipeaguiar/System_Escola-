@@ -19,14 +19,14 @@ namespace System_Escola.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "insert into Curso Values (null, @nome, @cargaHoraria, @descricao, @turno);";
+                comando.CommandText = "insert into Curso Values (null, @nome, @cargaHoraria, @descricao, @turno, @escola);";
 
                 comando.Parameters.AddWithValue("@nome", curso.Nome);
                 comando.Parameters.AddWithValue("@cargaHoraria", curso.CargaHoraria);
                 comando.Parameters.AddWithValue("@descricao", curso.Descricao);
                 comando.Parameters.AddWithValue("@turno", curso.Turno);
-
-
+                comando.Parameters.AddWithValue("@escola", curso.Escola.Id);
+                //meu pau
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -60,8 +60,7 @@ namespace System_Escola.Models
                     curso.Nome = DAOHelper.GetString(reader, "nome_cur");
                     curso.CargaHoraria = DAOHelper.GetString(reader, "carga_horaria_cur");
                     curso.Descricao = DAOHelper.GetString(reader, "descricao_cur");
-                    curso.Turno = DAOHelper.GetString(reader, "turno_cur"); 
-
+                    curso.Turno = DAOHelper.GetString(reader, "turno_cur");
 
                     lista.Add(curso);
                 }

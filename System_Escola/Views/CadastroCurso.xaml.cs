@@ -27,13 +27,14 @@ namespace System_Escola.Views
         public CadastroCurso()
         {
             InitializeComponent();
+            LoadDataGrid();
             Loaded += CadastroCurso_Loaded;
         }
         public CadastroCurso(Curso Curso)
         {
             InitializeComponent();
             _curso = Curso;
-
+            LoadDataGrid();
             Loaded += CadastroCurso_Loaded;
         }
 
@@ -67,6 +68,20 @@ namespace System_Escola.Views
                     MessageBox.Show("Registro Salvo!");
                 }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void LoadDataGrid()
+        {
+            try
+            {
+                var dao = new EscolaDAO();
+                List<Escola> listaEscolas = dao.List();
+
+                cb_ListEscolas.ItemsSource = listaEscolas;
             }
             catch (Exception ex)
             {
